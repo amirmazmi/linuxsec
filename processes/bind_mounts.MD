@@ -10,3 +10,8 @@ https://righteousit.com/2024/07/24/hiding-linux-processes-with-bind-mounts/
 `cat /proc/mounts | grep /proc`
 
 `cat /proc/*/mounts | awk '$2 ~ /^\/proc\/[0-9]*($|\/)/ { print $2 }' | sort -ur`
+
+
+### Mount procs
+
+`mount -B /proc/<target> /proc/<proc to mount>`
